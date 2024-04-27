@@ -1,6 +1,7 @@
 import Home from '@/Components/Assets/Home/home.jpg'
 
 import { GiBlockHouse } from "react-icons/gi";
+import { TfiCommentsSmiley } from "react-icons/tfi";
 
 import Management1 from '@/Components/Assets/Home/services1.jpg'
 import Management2 from '@/Components/Assets/Home/services2.jpg'
@@ -30,8 +31,8 @@ export const navLink = [
 
   {
     id: 4,
-    name: "Project",
-    path: "/project",
+    name: "Gallery",
+    path: "/gallery",
   },
 
   {
@@ -137,4 +138,33 @@ export const dataQuestion = [
     title: "How to contact us?",
     text: "Having an FAQ section is a great way to present information about your product or service. Using the question-and-answer format makes it more relatable to your users."
   }
+]
+
+export const headingClient = [
+  {
+    title: "Our Clients"
+  }
+]
+
+export const dataClient = [
+  {
+    id: 1,
+    icons: <TfiCommentsSmiley />,
+    desc: "Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services.",
+    name: "John Doe",
+  },
+
+  {
+    id: 2,
+    icons: <TfiCommentsSmiley />,
+    desc: "Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services.",
+    name: "Steven Doe",
+  },
+
+  {
+    id: 3,
+    icons: <TfiCommentsSmiley />,
+    desc: "Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services.",
+    name: "Jane Doe",
+  },
 ]

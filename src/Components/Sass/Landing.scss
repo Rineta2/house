@@ -196,7 +196,7 @@
 //======================== Form ========================//
 
 aside {
-  width: 80%;
+  width: 90%;
   margin: 0 auto;
   height: 180px;
   background-color: $primary-c;
@@ -206,9 +206,11 @@ aside {
   align-items: center;
   justify-content: center;
   border-radius: $br-12;
+  flex-wrap: wrap;
 
   @media only screen and (max-width: 992px) {
     width: 90%;
+    height: 100%;
   }
 
   @media only screen and (max-width: 768px) {
@@ -225,7 +227,6 @@ aside {
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
       gap: 1rem;
 
       .form__type {
@@ -233,6 +234,11 @@ aside {
         align-items: center;
         justify-content: center;
         column-gap: 3rem;
+
+        @media only screen and (max-width: 992px) {
+          flex-wrap: wrap;
+          row-gap: 2rem;
+        }
 
         @media only screen and (max-width: 768px) {
           flex-wrap: wrap;
@@ -247,10 +253,11 @@ aside {
           font-size: $normal-fs;
           letter-spacing: 1px;
           font-weight: 600;
-          width: 200px;
+          width: 190px;
+          margin-top: 1rem;
 
           @media only screen and (max-width: 992px) {
-            width: 180px;
+            width: 170px;
           }
 
           @media only screen and (max-width: 768px) {
@@ -385,7 +392,15 @@ aside {
           width: 500px;
           border-radius: $br-12;
           height: 250px;
+          transition: all .5s ease-in-out;
+          cursor: pointer;
           object-fit: cover;
+          overflow: hidden;
+
+          &:hover {
+            opacity: 0.5;
+            transform: scale(1.1);
+          }
 
           @media only screen and (max-width: 992px) {
             width: 400px;
@@ -583,7 +598,7 @@ aside {
         flex-direction: column;
         background-color: $body-c;
 
-        @media only screen and (max-width: 468px) {
+        @media only screen and (max-width: 768px) {
           width: 100%;
         }
 
@@ -607,3 +622,126 @@ aside {
 }
 
 //======================== Client ========================//
+.client {
+
+  .client__container {
+    padding: 1rem 5%;
+
+    @media only screen and (max-width: 992px) {
+      padding: 1rem 0;
+    }
+
+    .heading {
+      h1 {
+        font-size: $h1-fs;
+        color: $primary-c;
+        letter-spacing: 1px;
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+
+      @media only screen and (max-width: 468px) {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media only screen and (max-width: 320px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .box {
+        width: 350px;
+        height: 200px;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+
+        @media only screen and (max-width: 992px) {
+          width: 100%;
+        }
+
+        @media only screen and (max-width: 768px) {
+          height: 300px;
+        }
+
+        i {
+          font-size: $big-fs;
+          margin-bottom: .5rem;
+        }
+
+        h3 {
+          font-size: $normal-fs;
+          font-weight: 400;
+          margin-bottom: 1rem;
+        }
+
+        span {
+          font-size: $h1-fs;
+          font-weight: 600;
+          letter-spacing: 1px;
+          font-style: italic;
+        }
+
+        .row {
+          position: absolute;
+          width: 20%;
+          height: 3px;
+          bottom: 10px;
+          border-radius: $br-12;
+        }
+      }
+    }
+  }
+
+  &.dark {
+    .content {
+      .box {
+        i {
+          color: $body-c;
+        }
+
+        h3 {
+          color: $body-c;
+        }
+
+        span {
+          color: $body-c;
+        }
+
+        .row {
+          background-color: $body-c;
+        }
+      }
+    }
+  }
+
+  &.light {
+    .content {
+      .box {
+        i {
+          color: $title-c;
+        }
+
+        h3 {
+          color: $title-c;
+        }
+
+        span {
+          color: $title-c;
+        }
+
+        .row {
+          background-color: $title-c;
+        }
+      }
+    }
+  }
+}
