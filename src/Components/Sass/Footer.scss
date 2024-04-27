@@ -1,0 +1,71 @@
+@import './Variable.scss';
+
+footer {
+  background-color: $primary-c;
+
+  .footer__container {
+    padding: 1rem 5%;
+
+    .content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+      }
+
+      p {
+        font-size: $normal-fs;
+        text-align: center;
+        color: $title-c;
+        letter-spacing: 1px;
+        display: flex;
+        gap: .2rem;
+
+        a {
+          color: $title-c;
+          letter-spacing: 1px;
+        }
+      }
+    }
+  }
+}
+
+.top {
+  position: fixed;
+  bottom: 40px;
+  color: $body-c;
+  left: -100%;
+  width: 40px;
+  height: 40px;
+  background-color: $primary-c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 2s ease-in-out;
+  z-index: 10;
+  cursor: pointer;
+  animation: top 2s linear infinite;
+
+  @keyframes top {
+    0% {
+      transform: translate(0, 0);
+    }
+
+    100% {
+      transform: translate(0, -8px);
+    }
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+}
+
+.arrow {
+  left: 15px;
+}

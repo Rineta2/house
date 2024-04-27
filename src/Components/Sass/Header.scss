@@ -6,6 +6,19 @@ header {
   left: 0;
   width: 100%;
   z-index: 999;
+  transition: background-color .5s ease-in-out;
+
+  &.dark {
+    &.fixed {
+      background-color: $title-c;
+    }
+  }
+
+  &.light {
+    &.fixed {
+      background-color: $body-c;
+    }
+  }
 
   .nav {
     display: flex;
@@ -20,6 +33,7 @@ header {
 
     @media only screen and (max-width: 768px) {
       justify-content: space-between;
+      height: calc($hh - 1rem);
     }
 
     .logo {
@@ -49,21 +63,23 @@ header {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        background-color: $primary-c;
-        opacity: 0;
-        visibility: hidden;
-        transition: opacity .5ms ease-in-out;
+        background-color: rgba(0, 0, 0, .25);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        clip-path: circle(0% at 50% 50%);
+        transition: clip-path 2s ease-in-out;
       }
 
       &.open {
-        opacity: 1;
-        visibility: visible;
+        clip-path: circle(150% at 50% 50%);
       }
 
-      .nav__link {
-        font-size: $tiny-fs;
-        letter-spacing: 1px;
-        font-weight: 400;
+      .nav__item {
+        .nav__link {
+          font-size: $tiny-fs;
+          letter-spacing: 1px;
+          font-weight: 400;
+        }
       }
     }
 
@@ -136,6 +152,10 @@ header {
       .nav__list {
         .nav__link {
           color: $body-c;
+
+          &.active {
+            color: $primary-c;
+          }
         }
       }
 
@@ -158,6 +178,10 @@ header {
       .nav__list {
         .nav__link {
           color: $title-c;
+
+          &.active {
+            color: $primary-c;
+          }
         }
       }
 

@@ -3,6 +3,11 @@
 //======================== Home ========================//
 .home {
   position: relative;
+  min-height: 80vh;
+
+  @media only screen and (max-width: 468px) {
+    min-height: 0;
+  }
 
   .home__container {
     padding: 1rem 5%;
@@ -34,7 +39,7 @@
         .home__icons {
           display: flex;
           justify-content: center;
-          margin-top: 5rem;
+          margin-top: 10rem;
 
           @media only screen and (max-width: 768px) {
             margin-top: 2rem;
@@ -89,7 +94,7 @@
           width: 40%;
           object-fit: cover;
           background-size: cover;
-          height: 600px;
+          height: 650px;
           border-bottom-left-radius: $br-12;
           overflow: hidden;
 
@@ -194,7 +199,6 @@
 }
 
 //======================== Form ========================//
-
 aside {
   width: 90%;
   margin: 0 auto;
@@ -211,13 +215,13 @@ aside {
   @media only screen and (max-width: 992px) {
     width: 90%;
     height: 100%;
+    margin-top: 0;
   }
 
   @media only screen and (max-width: 768px) {
     width: 100%;
     border-radius: 0;
     height: 100%;
-    margin-top: 0;
   }
 
   .aside__container {
@@ -317,7 +321,6 @@ aside {
 }
 
 //======================== Management ========================//
-
 .management {
   .management__container {
     padding: 1rem 5%;
@@ -403,7 +406,7 @@ aside {
           }
 
           @media only screen and (max-width: 992px) {
-            width: 400px;
+            width: 360px;
           }
 
           @media only screen and (max-width: 768px) {
@@ -446,7 +449,6 @@ aside {
 }
 
 //======================== Penawaran ========================//
-
 .featured {
   .featured__container {
     padding: 1rem 5%;
@@ -740,6 +742,166 @@ aside {
 
         .row {
           background-color: $title-c;
+        }
+      }
+    }
+  }
+}
+
+//======================== Kontak ========================//
+.kontak {
+  .kontak__container {
+    padding: 1rem 5%;
+
+    @media only screen and (max-width: 992px) {
+      padding: 1rem 0;
+    }
+
+    .heading {
+      h1 {
+        color: $primary-c;
+        font-size: $big-fs;
+        letter-spacing: 1px;
+        font-weight: 600;
+      }
+    }
+
+    .content {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      margin-top: 2rem;
+
+      @media only screen and (max-width: 468px) {
+        flex-direction: column;
+      }
+
+      .box__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50%;
+        background-color: transparent;
+        height: 400px;
+        justify-content: center;
+        border: 2px solid $primary-c;
+
+        @media only screen and (max-width: 468px) {
+          width: 100%;
+          order: 2;
+        }
+
+        .box {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          height: 150px;
+          position: relative;
+
+          h3 {
+            font-size: $h1-fs;
+            margin-bottom: 1rem;
+            letter-spacing: 1px;
+          }
+
+          a {
+            font-size: $normal-fs;
+            letter-spacing: 1px;
+          }
+
+          &::after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            background-color: $primary-c;
+            height: 3px;
+            bottom: 0;
+          }
+        }
+
+        .social {
+          display: flex;
+          align-items: center;
+          gap: 2rem;
+          margin-top: 2rem;
+
+          a {
+            font-size: $normal-fs;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $primary-c;
+            border-radius: 50%;
+            transition: background-color .3s ease-in-out;
+            overflow: hidden;
+
+            &:hover {
+              background-color: transparent;
+              border: 1px solid $primary-c;
+            }
+          }
+        }
+      }
+
+      .img {
+        width: 50%;
+
+        @media only screen and (max-width: 468px) {
+          width: 100%;
+        }
+
+        img {
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+
+          @media only screen and (max-width: 468px) {
+            height: 300px;
+          }
+        }
+      }
+    }
+
+    &.dark {
+      .content {
+        .box {
+          h3 {
+            color: $body-c;
+          }
+
+          a {
+            color: $body-c;
+          }
+        }
+
+        .social {
+          a {
+            color: $body-c;
+          }
+        }
+      }
+    }
+
+    &.light {
+      .content {
+        .box {
+          h3 {
+            color: $title-c;
+          }
+
+          a {
+            color: $title-c;
+          }
+        }
+
+        .social {
+          a {
+            color: $title-c;
+          }
         }
       }
     }

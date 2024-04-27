@@ -37,7 +37,6 @@ export default function Form() {
 
     if (formDataInput.nama && formDataInput.email && formDataInput.nomber && formDataInput.date) {
       try {
-        // Periksa duplikat email dan nomor sebelum mengirimkan data
         const isDuplicate = await checkDuplicate(formDataInput.email, formDataInput.nomber);
 
         if (isDuplicate) {

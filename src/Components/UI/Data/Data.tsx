@@ -2,6 +2,7 @@ import Home from '@/Components/Assets/Home/home.jpg'
 
 import { GiBlockHouse } from "react-icons/gi";
 import { TfiCommentsSmiley } from "react-icons/tfi";
+import { FaFacebookF, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 import Management1 from '@/Components/Assets/Home/services1.jpg'
 import Management2 from '@/Components/Assets/Home/services2.jpg'
@@ -9,6 +10,8 @@ import Management2 from '@/Components/Assets/Home/services2.jpg'
 import Penawaran1 from '@/Components/Assets/Home/featue1.jpg'
 import Penawaran2 from '@/Components/Assets/Home/featur2.jpg'
 import Penawaran3 from '@/Components/Assets/Home/feature3.jpg'
+
+import Kontak from '@/Components/Assets/Home/kontak.jpg'
 
 export const navLink = [
   {
@@ -167,4 +170,52 @@ export const dataClient = [
     desc: "Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services.",
     name: "Jane Doe",
   },
+]
+
+export const kontakHeading = [
+  {
+    title: "Contact US"
+  }
+]
+
+export const dataKontak = [
+  {
+    id: 1,
+    title: "Phone",
+    desc: "+62 813-9863-2939",
+    path: "tel:+6281398632939"
+  },
+
+  {
+    id: 2,
+    title: "Email",
+    desc: "rinetastore@gmail.com",
+    path: "mailto:rinetastore@gmail.com"
+  },
+]
+
+export const socialKontak = [
+  {
+    id: 1,
+    icons: <FaFacebookF />,
+    path: "https://www.facebook.com/profile.php?id=100007663247764&locale=id_ID"
+  },
+
+  {
+    id: 2,
+    icons: <FaInstagram />,
+    path: "https://www.instagram.com/rineta.io/"
+  },
+
+  {
+    id: 3,
+    icons: <FaWhatsapp />,
+    path: "https://wa.me/+6281398632939"
+  },
+]
+
+export const imgKontak = [
+  {
+    img: Kontak
+  }
 ]
