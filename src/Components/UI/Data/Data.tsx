@@ -112,3 +112,29 @@ export const dataPenawaran = [
     desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra."
   },
 ]
+
+export const headingQuestion = [
+  {
+    title: "Frequently Asked Questions"
+  }
+]
+
+export const dataQuestion = [
+  {
+    id: 1,
+    title: "How to contact us?",
+    text: "Having an FAQ section is a great way to present information about your product or service. Using the question-and-answer format makes it more relatable to your users."
+  },
+
+  {
+    id: 2,
+    title: "How to contact us?",
+    text: "Having an FAQ section is a great way to present information about your product or service. Using the question-and-answer format makes it more relatable to your users."
+  },
+
+  {
+    id: 3,
+    title: "How to contact us?",
+    text: "Having an FAQ section is a great way to present information about your product or service. Using the question-and-answer format makes it more relatable to your users."
+  }
+]

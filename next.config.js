@@ -1,11 +1,7 @@
-const { DeleteSourceMapsPlugin } = require('webpack-delete-sourcemaps-plugin');
-const withBundleAnalyzer = require('@next/bundle-analyzer')();
+/** @type {import('next').NextConfig} */
+const nextConfig = {}
 
-const nextConfig = {
-  devtool: 'hidden-source-map',
-  plugins: [
-    new DeleteSourceMapsPlugin()
-  ]
-};
+const withBundleAnalyzer = require('@next/bundle-analyzer')()
 
-module.exports = process.env.ANALYZE === 'true' ? withBundleAnalyzer(nextConfig) : nextConfig;
+module.exports =
+  process.env.ANALYZE === 'true' ? withBundleAnalyzer(nextConfig) : nextConfig
