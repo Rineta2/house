@@ -1,0 +1,179 @@
+@import './Variable.scss';
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: calc($hh + 1.5rem);
+    padding: 2rem 7%;
+
+    @media only screen and (max-width: 992px) {
+      justify-content: space-around;
+    }
+
+    @media only screen and (max-width: 768px) {
+      justify-content: space-between;
+    }
+
+    .logo {
+      font-size: $h1-fs;
+      letter-spacing: 1px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+
+      i {
+        font-size: $h1-fs;
+        margin-top: .1rem;
+      }
+    }
+
+    .nav__list {
+      display: flex;
+      gap: 2rem;
+      align-items: center;
+
+      @media only screen and (max-width: 768px) {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: $primary-c;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity .5ms ease-in-out;
+      }
+
+      &.open {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .nav__link {
+        font-size: $tiny-fs;
+        letter-spacing: 1px;
+        font-weight: 400;
+      }
+    }
+
+    .nav__actions {
+      display: flex;
+      align-items: center;
+
+      .theme {
+        select {
+          font-size: $normal-fs;
+          width: 100px;
+          height: 30px;
+          border: none;
+          border-radius: $br-6;
+          padding: 0 10px;
+          border: $primary-c 1px solid;
+          letter-spacing: 1px;
+
+          @media only screen and (max-width: 468px) {
+            padding: 0 5px;
+            border-radius: 0;
+          }
+
+          &:hover {
+            cursor: pointer;
+          }
+
+          &:focus {
+            outline: none;
+          }
+
+          option {
+            font-size: $tiny-fs;
+            height: 40px;
+            padding: 0 10px;
+            letter-spacing: 1px;
+
+            @media only screen and (max-width: 468px) {
+              padding: 0 5px;
+            }
+          }
+        }
+      }
+
+      .toggle {
+        display: none;
+
+        @media only screen and (max-width: 768px) {
+          display: block;
+          z-index: 99;
+        }
+
+        .icons {
+          font-size: 1.5rem;
+          cursor: pointer;
+          margin-right: 1rem;
+        }
+
+        .close {
+          position: absolute;
+          top: 15px;
+          right: 15px;
+          font-size: 1.5rem;
+          color: $body-c;
+        }
+      }
+    }
+
+    &.dark {
+      .nav__list {
+        .nav__link {
+          color: $body-c;
+        }
+      }
+
+      .logo {
+        color: $body-c;
+
+        i {
+          color: $body-c;
+        }
+      }
+
+      .nav__actions {
+        .icons {
+          color: $body-c;
+        }
+      }
+    }
+
+    &.light {
+      .nav__list {
+        .nav__link {
+          color: $title-c;
+        }
+      }
+
+      .logo {
+        color: $title-c;
+
+        i {
+          color: $primary-c;
+        }
+      }
+
+      .nav__actions {
+        .icons {
+          color: $title-c;
+        }
+      }
+    }
+  }
+}

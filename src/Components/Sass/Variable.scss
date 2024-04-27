@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
+
+$body-c: #F8F8ff;
+$primary-c: #FFCB71;
+$title-c: #1B1B1B;
+
+$big-fs: 3rem;
+$h1-fs: 1.8rem;
+$normal-fs: 1.1rem;
+$tiny-fs: .913rem;
+
+$body-f: 'Roboto Slab', serif;
+
+$hh: 3.5rem;
+
+$br-12: 12px;
+$br-6: 6px;
+
+:root {
+  background-color: $body-c;
+  color: $title-c;
+
+  &.dark {
+    background-color: $title-c;
+  }
+
+  &.light {
+    background-color: $body-c;
+  }
+}
+
+*,
+::after,
+::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style: none;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+section {
+  padding: 7rem 2rem;
+
+  @media only screen and (max-width: 768px) {
+    padding: 4rem 1rem;
+  }
+
+  @media only screen and (max-width: 468px) {
+    padding: 3rem 1rem;
+  }
+}
+
+.container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+html {
+  font-size: 80%;
+  scroll-behavior: smooth;
+}
+
+::selection {
+  background-color: transparent;
+  color: $primary-c;
+}
+
+.hr {
+  width: 90%;
+  height: 3px;
+  border-radius: $br-6;
+  background-color: $primary-c;
+  margin: 0 auto;
+  margin-top: 3rem;
+}
