@@ -1,9 +1,10 @@
 @import './Variable.scss';
 
 .about {
+
   .about__container {
-    padding: 1rem 5%;
     margin-top: 3rem;
+    padding: 1rem 4%;
 
     @media only screen and (max-width: 992px) {
       padding: 1rem 0;
