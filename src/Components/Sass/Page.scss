@@ -4,7 +4,7 @@
 
   .about__container {
     margin-top: 3rem;
-    padding: 1rem 4%;
+    padding: 1rem 3%;
 
     @media only screen and (max-width: 992px) {
       padding: 1rem 0;
@@ -49,9 +49,10 @@
       .img {
         margin-bottom: 2rem;
         overflow: hidden;
+        width: 100%;
 
         img {
-          width: 600px;
+          width: 100%;
           height: 400px;
           object-fit: cover;
           opacity: .5;
