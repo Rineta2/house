@@ -60,21 +60,15 @@
           transition: all .5s ease-in-out;
 
           @media only screen and (max-width: 992px) {
-            width: 450px;
+            width: 100%;
           }
 
           @media only screen and (max-width: 768px) {
-            width: 350px;
             height: 300px;
           }
 
           @media only screen and (max-width: 468px) {
-            width: 165px;
             height: 250px;
-          }
-
-          @media only screen and (max-width: 320px) {
-            width: 280px;
           }
         }
 
@@ -262,6 +256,123 @@
             color: $body-c;
           }
         }
+      }
+    }
+  }
+}
+
+.gallery {
+  .gallery__container {
+    padding: 1rem 5%;
+
+    @media only screen and (max-width: 992px) {
+      padding: 1rem 0;
+    }
+
+    .heading {
+      margin-bottom: 3rem;
+      margin-top: 2rem;
+
+      h1 {
+        font-size: $big-fs;
+        color: $primary-c;
+        font-weight: 600;
+        letter-spacing: 1px;
+        text-align: center;
+      }
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+
+      @media only screen and (max-width: 768px) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      @media only screen and (max-width: 468px) {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      @media only screen and (max-width: 320px) {
+        grid-template-columns: repeat(1, 1fr);
+      }
+
+      .img {
+        width: 100%;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 280px;
+          opacity: .5;
+          object-fit: cover;
+          transition: all .5s ease-in-out;
+          cursor: pointer;
+
+          @media only screen and (max-width: 992px) {
+            height: 250px;
+          }
+
+          @media only screen and (max-width: 768px) {
+            height: 200px;
+          }
+        }
+
+        &:hover {
+          img {
+            transform: scale(1.1);
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .model {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, .25);
+      backdrop-filter: blur(10px);
+      transition: all .5s ease-in-out;
+      z-index: 999;
+      opacity: 0;
+      visibility: hidden;
+
+      &.open {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      img {
+        width: 600px;
+        height: 500px;
+        object-fit: cover;
+
+        @media only screen and (max-width: 768px) {
+          width: 400px;
+          height: 400px;
+        }
+
+        @media only screen and (max-width: 468px) {
+          width: 300px;
+          height: 300px;
+        }
+      }
+
+      .close {
+        position: absolute;
+        top: 4rem;
+        color: $primary-c;
+        right: 2rem;
+        font-size: 1.5rem;
+        cursor: pointer;
       }
     }
   }

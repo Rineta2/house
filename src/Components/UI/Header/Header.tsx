@@ -86,7 +86,7 @@ export default function Header() {
     <header className={`header ${fixed ? "fixed" : ""} ${isDarkMode ? "dark" : "light"}`}>
       <nav className={`nav container ${isDarkMode ? "dark" : "light"}`}>
         <Link className="logo" href={'/'}>
-          <i><MdOutlineHouse /></i>House
+          <i><MdOutlineHouse /></i>Refined Elegance
         </Link>
 
         <ul className={`nav__list ${isOpen ? "open" : ""}`}>

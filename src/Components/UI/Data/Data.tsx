@@ -16,6 +16,20 @@ import Kontak from '@/Components/Assets/Home/kontak.jpg'
 import About1 from '@/Components/Assets/About/about.jpg'
 import About2 from '@/Components/Assets/About/about2.jpg'
 
+import img1 from '@/Components/Assets/Gallery/img1.jpg'
+import img2 from '@/Components/Assets/Gallery/img2.jpg'
+import img3 from '@/Components/Assets/Gallery/img3.jpg'
+import img4 from '@/Components/Assets/Gallery/img4.jpg'
+import img5 from '@/Components/Assets/Gallery/img5.jpg'
+import img6 from '@/Components/Assets/Gallery/img6.jpg'
+import img7 from '@/Components/Assets/Gallery/img7.jpg'
+import img8 from '@/Components/Assets/Gallery/img8.jpg'
+import img9 from '@/Components/Assets/Gallery/img9.jpg'
+import img10 from '@/Components/Assets/Gallery/img10.jpg'
+import img11 from '@/Components/Assets/Gallery/img11.jpg'
+import img12 from '@/Components/Assets/Gallery/img12.jpg'
+
+
 export const navLink = [
   {
     id: 1,
@@ -25,39 +39,33 @@ export const navLink = [
 
   {
     id: 2,
-    name: "About",
+    name: "Tentang Kami",
     path: "/about",
   },
 
   {
     id: 3,
-    name: "Services",
-    path: "/services",
-  },
-
-  {
-    id: 4,
-    name: "Gallery",
+    name: "Gallery Kami",
     path: "/gallery",
   },
 
   {
-    id: 5,
-    name: "Team",
+    id: 4,
+    name: "Tim Kami",
     path: "/team",
   }
 ]
 
 export const homeIcons = [
   {
-    title: "RINETA",
+    title: "Refined Elegance",
     icons: <GiBlockHouse />
   }
 ]
 
 export const homeTitle = [
   {
-    text: "Property Management System",
+    text: "Sistem Manajemen Properti",
     date: "April 2024"
   }
 ]
@@ -71,12 +79,12 @@ export const homeData = [
 export const headingManagement = [
   {
     id: 1,
-    title: "Dedicated Management Services",
+    title: "Layanan Manajemen Khusus",
   },
 
   {
     id: 2,
-    title: "What's special about your product, service, or company? Use this space to highlight the things that set you apart from your competition, whether it's a special feature, a unique philosophy, or awards and recognition that you have received. Think of this as your elevator pitch to get the reader's attention."
+    title: "Menawarkan pengelolaan properti yang efisien dan tanpa repot, memastikan rumah Anda selalu dalam kondisi prima. Dari pemeliharaan rutin hingga renovasi canggih, kami mengatur segalanya dengan keahlian untuk meningkatkan kenyamanan dan nilai investasi Anda. Ideal untuk mereka yang menghargai kemudahan dan kedamaian pikiran dalam manajemen properti."
   }
 ]
 
@@ -93,7 +101,7 @@ export const imgManagement = [
 
 export const headingPenawaran = [
   {
-    title: "What We Offer"
+    title: "Apa Yang Kita Tawarkan"
   }
 ]
 
@@ -101,54 +109,54 @@ export const dataPenawaran = [
   {
     id: 1,
     img: Penawaran1,
-    title: "Property Management",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra."
+    title: "Solusi Manajemen Properti Rumah",
+    desc: "Menawarkan pengelolaan lengkap untuk meningkatkan kenyamanan dan nilai rumah Anda, semuanya dengan kemudahan dan profesionalisme."
   },
 
   {
     id: 2,
     img: Penawaran2,
-    title: "Long Term Rentals",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra."
+    title: "Optimalisasi Properti Rumah",
+    desc: "Fokus pada kehidupan Anda, sementara kami mengoptimalkan rumah Anda. Dengan layanan manajemen properti terintegrasi, kami meningkatkan nilai dan kenyamanan rumah Anda secara profesional dan efektif."
   },
 
   {
     id: 1,
     img: Penawaran3,
-    title: "Property Maintenance",
-    desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et viverra."
+    title: "Servis Manajemen Rumah",
+    desc: "Atur rumah Anda tanpa kerumitan dengan servis manajemen yang mengurus segalanya—dari pemeliharaan reguler hingga upgrade strategis. Dapatkan ketenangan pikiran dengan rumah yang selalu dalam kondisi terbaik."
   },
 ]
 
 export const headingQuestion = [
   {
-    title: "Frequently Asked Questions"
+    title: "Pertanyaan Yang Sering Diajukan ?"
   }
 ]
 
 export const dataQuestion = [
   {
     id: 1,
-    title: "How to contact us?",
-    text: "Having an FAQ section is a great way to present information about your product or service. Using the question-and-answer format makes it more relatable to your users."
+    title: "FAQ Layanan Rumah?",
+    text: "Menyediakan semua yang Anda butuhkan untuk mengelola dan memelihara rumah Anda dengan efektif. Temukan tips keamanan, strategi pemeliharaan, dan saran peningkatan untuk menjaga dan meningkatkan nilai properti Anda dengan mudah."
   },
 
   {
     id: 2,
-    title: "How to contact us?",
-    text: "Having an FAQ section is a great way to present information about your product or service. Using the question-and-answer format makes it more relatable to your users."
+    title: "Buku Panduan Esensial Pemilik Rumah?",
+    text: "Temukan cara-cara cerdas untuk mengelola dan meningkatkan rumah Anda dengan panduan ini, yang mencakup tips pemeliharaan dan peningkatan yang praktis dan efektif."
   },
 
   {
     id: 3,
-    title: "How to contact us?",
-    text: "Having an FAQ section is a great way to present information about your product or service. Using the question-and-answer format makes it more relatable to your users."
+    title: "Panduan Pemeliharaan dan Peningkatan Rumah Anda?",
+    text: "Dari pemeliharaan dasar hingga proyek peningkatan rumah, panduan praktis ini menyediakan instruksi terperinci untuk menjaga dan meningkatkan rumah Anda dengan mudah."
   }
 ]
 
 export const headingClient = [
   {
-    title: "Our Clients"
+    title: "Klien Kami"
   }
 ]
 
@@ -156,37 +164,37 @@ export const dataClient = [
   {
     id: 1,
     icons: <TfiCommentsSmiley />,
-    desc: "Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services.",
+    desc: "Luar biasa! Refined Elegance menjaga segala pemeliharaan dengan cepat dan profesional. Merekomendasikan layanan ini kepada siapa saja yang membutuhkan bantuan manajemen properti yang handal!",
     name: "John Doe",
   },
 
   {
     id: 2,
     icons: <TfiCommentsSmiley />,
-    desc: "Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services.",
+    desc: "Sangat puas! Dengan Refined Elegance, saya tidak perlu lagi repot memikirkan pemeliharaan. Tim mereka efisien dan sangat membantu, membuat hidup saya jauh lebih mudah.",
     name: "Steven Doe",
   },
 
   {
     id: 3,
     icons: <TfiCommentsSmiley />,
-    desc: "Testimonials are short quotes from people who love your brand. It's a great way to convince customers to try your services.",
+    desc: "Fantastis! Refined Elegance telah membebaskan saya dari kekhawatiran pemeliharaan rumah. Mereka responsif dan detail, memberikan hasil yang selalu melebihi ekspektasi. Sangat direkomendasikan!",
     name: "Jane Doe",
   },
 ]
 
 export const kontakHeading = [
   {
-    title: "Contact US"
+    title: "Kontak Kami"
   }
 ]
 
 export const dataKontak = [
   {
     id: 1,
-    title: "Phone",
+    title: "Whatsapp",
     desc: "+62 813-9863-2939",
-    path: "tel:+6281398632939"
+    path: "https://wa.me/+6281398632939"
   },
 
   {
@@ -225,8 +233,8 @@ export const imgKontak = [
 
 export const aboutHeading = [
   {
-    title: "About Us",
-    text: "FOX GROUP is the leading retail group with an ever-growing portfolio of partnerships with homegrown and global fashion & lifestyle brands With our constant drive, more than 1000 stores worldwide, online capabilities, complete supply chain resources, solid financial status (listed on TASE), and the most extensive loyalty program membership in Israel,we see only opportunities on every horizon."
+    title: "Tentang kami",
+    text: "Refined Elegance adalah studio desain interior yang mengkombinasikan keanggunan modern dengan fungsionalitas tinggi untuk menciptakan ruang yang tidak hanya indah tetapi juga nyaman. Dengan penekanan pada material berkualitas dan palet warna yang sofistikat, setiap ruang yang kami rancang adalah manifestasi dari kemewahan yang sederhana dan elegan, diimbangi dengan kenyamanan dan kepraktisan untuk kehidupan sehari-hari. Ideal bagi mereka yang menghargai desain yang bijaksana dan lingkungan yang inspiratif."
   }
 ]
 
@@ -245,13 +253,81 @@ export const dataAbout = [
 export const penawaran = [
   {
     id: 1,
-    title: "OUR VISION",
-    text: "To be the leading retailer in every category and every territory we operate in."
+    title: "VISI KAMI",
+    text: "Kami bertujuan menjadi pemimpin industri dalam manajemen properti yang inovatif dan berkelanjutan, menciptakan lingkungan yang nyaman, aman, dan efisien. Dengan menggunakan teknologi canggih dan praktik terbaik, kami berkomitmen meningkatkan kualitas hidup dan membangun hubungan berkelanjutan dengan klien, fokus pada kepuasan dan keberlanjutan."
   },
 
   {
     id: 2,
-    title: "STRATEGY",
-    text: "Fox Group’s retail leadership is built on an extraordinary history of anticipating trends, logistical excellence, and a win-win approach to our brand portfolio partners and customers. Our strategy is to build on this infrastructure to focus on further global expansion, lead through tech & Innovation and leverage our track record of outstanding execution"
+    title: "STRATEGI",
+    text: "Strategi kami mengutamakan inovasi dan efisiensi, dengan memanfaatkan teknologi terbaru untuk memperbaiki layanan manajemen properti. Kami fokus pada pelatihan tim yang komprehensif, kemitraan dengan penyedia layanan terkemuka, dan penyesuaian layanan yang sesuai dengan kebutuhan klien. Tujuan kami adalah melampaui ekspektasi pelanggan, mendorong pertumbuhan berkelanjutan, dan memperkuat posisi kami di pasar"
+  },
+]
+
+export const galleryHeading = [
+  {
+    title: "Galeri kami"
+  }
+]
+
+export const dataGallery = [
+  {
+    id: 1,
+    img: img1
+  },
+
+  {
+    id: 2,
+    img: img2
+  },
+
+  {
+    id: 3,
+    img: img3
+  },
+
+  {
+    id: 4,
+    img: img4
+  },
+
+  {
+    id: 5,
+    img: img5
+  },
+
+  {
+    id: 6,
+    img: img6
+  },
+
+  {
+    id: 7,
+    img: img7
+  },
+
+  {
+    id: 8,
+    img: img8
+  },
+
+  {
+    id: 9,
+    img: img9
+  },
+
+  {
+    id: 10,
+    img: img10
+  },
+
+  {
+    id: 11,
+    img: img11
+  },
+
+  {
+    id: 12,
+    img: img12
   },
 ]

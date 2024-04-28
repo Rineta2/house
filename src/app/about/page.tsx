@@ -208,7 +208,7 @@ export default function About() {
 
         <div className="services">
           <div className="box">
-            <h1>DREAMCARD LOYALTY</h1>
+            <h1>LOYALITAS KARTU MIMPI</h1>
             <div className="row"></div>
             <h3>
               <DL n={2} /> M
@@ -216,7 +216,7 @@ export default function About() {
           </div>
 
           <div className="box">
-            <h1>SQM OF RETAIL SPACE</h1>
+            <h1>SQM RUANG RITEL</h1>
             <div className="row"></div>
             <h3>
               +
@@ -225,7 +225,7 @@ export default function About() {
           </div>
 
           <div className="box">
-            <h1>Elegant Design & Interior</h1>
+            <h1>Desain & Interior Elegan</h1>
             <div className="row"></div>
             <h3>+
               <EDI n={10} /> K
@@ -233,7 +233,7 @@ export default function About() {
           </div>
 
           <div className="box">
-            <h1>COUNTRIES IN OUR OPERATION</h1>
+            <h1>NEGARA DALAM OPERASI KAMI</h1>
             <div className="row"></div>
             <h3>
               <COO n={20} />
@@ -241,7 +241,7 @@ export default function About() {
           </div>
 
           <div className="box">
-            <h1>STORES GLOBALLY</h1>
+            <h1>TOKO SECARA GLOBAL</h1>
             <div className="row"></div>
             <h3>
               <SG n={1005} />

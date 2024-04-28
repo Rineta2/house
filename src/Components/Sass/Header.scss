@@ -31,9 +31,9 @@ header {
       justify-content: space-around;
     }
 
-    @media only screen and (max-width: 768px) {
+    @media only screen and (max-width: 468px) {
       justify-content: space-between;
-      height: calc($hh - 1rem);
+      height: calc(5rem - 1.5rem);
     }
 
     .logo {
@@ -46,6 +46,14 @@ header {
       i {
         font-size: $big-fs;
         margin-top: .2rem;
+      }
+
+      @media only screen and (max-width: 468px) {
+        font-size: $normal-fs;
+
+        i {
+          font-size: $h1-fs;
+        }
       }
     }
 
