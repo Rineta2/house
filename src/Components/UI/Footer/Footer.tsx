@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import Logo from '@/Components/Assets/Logo/logo.png'
+import Logo from '@/Components/Assets/Logo/Footer.png'
 
 import Image from 'next/image'
 

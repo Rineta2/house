@@ -1,7 +1,6 @@
 @import './Variable.scss';
 
 footer {
-  background-color: $primary-c;
 
   .footer__container {
     padding: 1rem 5%;
@@ -12,22 +11,55 @@ footer {
       align-items: center;
 
       img {
-        width: 200px;
-        height: 200px;
+        width: 130px;
+        height: 130px;
         object-fit: cover;
+        border-radius: 50%;
+        margin-bottom: 2rem;
       }
 
       p {
         font-size: $normal-fs;
         text-align: center;
-        color: $title-c;
         letter-spacing: 1px;
         display: flex;
         gap: .2rem;
+        color: $body-c;
 
         a {
-          color: $title-c;
           letter-spacing: 1px;
+        }
+      }
+    }
+  }
+
+  &.dark {
+    background-color: $title-c;
+
+    .footer__container {
+      .content {
+        p {
+          color: $body-c;
+
+          a {
+            color: $body-c;
+          }
+        }
+      }
+    }
+  }
+
+  &.light {
+    background-color: $body-c;
+
+    .footer__container {
+      .content {
+        p {
+          color: $title-c;
+
+          a {
+            color: $title-c;
+          }
         }
       }
     }

@@ -13,6 +13,9 @@ import Penawaran3 from '@/Components/Assets/Home/feature3.jpg'
 
 import Kontak from '@/Components/Assets/Home/kontak.jpg'
 
+import About1 from '@/Components/Assets/About/about.jpg'
+import About2 from '@/Components/Assets/About/about2.jpg'
+
 export const navLink = [
   {
     id: 1,
@@ -218,4 +221,37 @@ export const imgKontak = [
   {
     img: Kontak
   }
+]
+
+export const aboutHeading = [
+  {
+    title: "About Us",
+    text: "FOX GROUP is the leading retail group with an ever-growing portfolio of partnerships with homegrown and global fashion & lifestyle brands With our constant drive, more than 1000 stores worldwide, online capabilities, complete supply chain resources, solid financial status (listed on TASE), and the most extensive loyalty program membership in Israel,we see only opportunities on every horizon."
+  }
+]
+
+export const dataAbout = [
+  {
+    id: 1,
+    img: About1
+  },
+
+  {
+    id: 2,
+    img: About2
+  },
+]
+
+export const penawaran = [
+  {
+    id: 1,
+    title: "OUR VISION",
+    text: "To be the leading retailer in every category and every territory we operate in."
+  },
+
+  {
+    id: 2,
+    title: "STRATEGY",
+    text: "Fox Group’s retail leadership is built on an extraordinary history of anticipating trends, logistical excellence, and a win-win approach to our brand portfolio partners and customers. Our strategy is to build on this infrastructure to focus on further global expansion, lead through tech & Innovation and leverage our track record of outstanding execution"
+  },
 ]
