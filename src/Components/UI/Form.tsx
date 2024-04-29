@@ -98,12 +98,10 @@ export default function Form() {
             </Zoom>
           </div>
 
-          <Fade duration={1000} triggerOnce delay={300} direction="up">
-            <div className="btn">
-              <button type="submit">Kirim</button>
-              <ToastContainer />
-            </div>
-          </Fade>
+          <div className="btn">
+            <button type="submit">Kirim</button>
+            <ToastContainer />
+          </div>
         </form>
 
         {errorMessage && <div className="error-message">{errorMessage}</div>}
