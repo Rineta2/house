@@ -65,9 +65,7 @@ export default function Kontak() {
           {
             imgKontak.map((item) => (
               <div className="img">
-                <Zoom duration={1000} delay={500} triggerOnce>
-                  <Image src={item.img} alt="" />
-                </Zoom>
+                <Image src={item.img} alt="" />
               </div>
             ))
           }

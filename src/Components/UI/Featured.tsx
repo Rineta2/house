@@ -31,9 +31,7 @@ export default function Featured() {
           {
             dataPenawaran.map((item) => (
               <div className="box" key={item.id}>
-                <Zoom duration={1000} delay={100} triggerOnce>
-                  <Image src={item.img} alt="" />
-                </Zoom>
+                <Image src={item.img} alt="" />
 
                 <div className="text">
                   <Fade direction='down' duration={1000} delay={100} triggerOnce>
