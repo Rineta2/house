@@ -29,6 +29,11 @@ import img10 from '@/Components/Assets/Gallery/img10.jpg'
 import img11 from '@/Components/Assets/Gallery/img11.jpg'
 import img12 from '@/Components/Assets/Gallery/img12.jpg'
 
+import prof1 from '@/Components/Assets/Team/prof1.jpg'
+import prof2 from '@/Components/Assets/Team/prof2.jpg'
+import prof3 from '@/Components/Assets/Team/prof3.jpg'
+
+import NotFound from '@/Components/Assets/404/404.svg'
 
 export const navLink = [
   {
@@ -330,4 +335,42 @@ export const dataGallery = [
     id: 12,
     img: img12
   },
+]
+
+export const teamHeading = [
+  {
+    title: "Team Proffesional Kami"
+  }
+]
+
+export const dataTeam = [
+  {
+    id: 1,
+    img: prof1,
+    name: "Daffa Fauzi",
+    text: "Ketua Umum"
+  },
+
+  {
+    id: 2,
+    img: prof2,
+    name: "Daffa Fauzi",
+    text: "Ketua Umum"
+  },
+
+  {
+    id: 3,
+    img: prof3,
+    name: "Daffa Fauzi",
+    text: "Ketua Umum"
+  },
+]
+
+export const notFoundData = [
+  {
+    img: NotFound,
+    text: "Halaman tidak ditemukan :(",
+    btn: "Kembali ke Beranda",
+    path: "/"
+  }
 ]

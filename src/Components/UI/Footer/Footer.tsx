@@ -12,6 +12,8 @@ import Link from 'next/link'
 
 import { FaArrowAltCircleUp } from 'react-icons/fa'
 
+import { Fade, Zoom } from 'react-awesome-reveal'
+
 export default function Footer() {
 
   const [currentYear] = useState(new Date().getFullYear());
@@ -42,8 +44,13 @@ export default function Footer() {
         <div className="footer__container container grid">
 
           <div className="content">
-            <Image src={Logo} alt="" />
-            <p>Copyright © {currentYear}. By <Link href="https://rineta.io">rineta.io</Link></p>
+            <Zoom duration={1000} delay={100} triggerOnce>
+              <Image src={Logo} alt="" />
+            </Zoom>
+
+            <Fade direction='up' duration={1000} delay={100} triggerOnce>
+              <p>Copyright © {currentYear}. By <Link href="https://rineta.io">rineta.io</Link></p>
+            </Fade>
           </div>
 
         </div>

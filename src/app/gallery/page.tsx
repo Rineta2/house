@@ -8,7 +8,7 @@ import Image from 'next/image'
 
 import '@/Components/Sass/Page.scss'
 
-import { FaTimes } from 'react-icons/fa'
+import { Zoom, Fade } from 'react-awesome-reveal'
 
 import { StaticImageData } from 'next/image'
 
@@ -55,17 +55,20 @@ export default function Gallery() {
         {
           galleryHeading.map((item) => (
             <div className="heading">
-              <h1>{item.title}</h1>
+              <Fade direction='down' duration={1000} delay={500} triggerOnce>
+                <h1>{item.title}</h1>
+              </Fade>
             </div>
           ))
         }
 
         <div className="content">
-
           {
             dataGallery.map((item) => (
               <div className="img" key={item.id}>
-                <Image src={item.img} alt="" onClick={() => getImg(item.img)} />
+                <Zoom duration={1000} delay={500} triggerOnce>
+                  <Image src={item.img} alt="" onClick={() => getImg(item.img)} />
+                </Zoom>
               </div>
             ))
           }

@@ -7,6 +7,9 @@ import { useTheme } from '@/Components/UI/Theme/Thema';
 import Image from 'next/image';
 
 import '@/Components/Sass/Landing.scss'
+
+import { Zoom, Fade } from 'react-awesome-reveal'
+
 export default function Home() {
 
   const { isDarkMode } = useTheme();
@@ -22,7 +25,9 @@ export default function Home() {
             {
               homeIcons.map((item) => (
                 <div className="home__icons">
-                  <h3><i>{item.icons}</i>{item.title}</h3>
+                  <Fade direction='down' duration={1000} delay={100} triggerOnce>
+                    <h3><i>{item.icons}</i>{item.title}</h3>
+                  </Fade>
                 </div>
               ))
             }
@@ -40,7 +45,9 @@ export default function Home() {
           {
             homeData.map((item) => (
               <div className="home__img">
-                <Image src={item.img} alt="" />
+                <Fade duration={1000} delay={100} triggerOnce>
+                  <Image src={item.img} alt="" />
+                </Fade>
               </div>
             ))
           }

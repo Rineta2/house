@@ -17,6 +17,8 @@ interface NumberProps {
   n: number;
 }
 
+import { Fade, Zoom } from 'react-awesome-reveal'
+
 export default function About() {
 
   const { isDarkMode } = useTheme();
@@ -178,8 +180,13 @@ export default function About() {
         {
           aboutHeading.map((item) => (
             <div className="heading">
-              <h1>{item.title}</h1>
-              <p>{item.text}</p>
+              <Fade direction='down' duration={1000} delay={500} triggerOnce>
+                <h1>{item.title}</h1>
+              </Fade>
+
+              <Fade direction='up' duration={1000} delay={500} triggerOnce>
+                <p>{item.text}</p>
+              </Fade>
             </div>
           ))
         }
@@ -188,7 +195,9 @@ export default function About() {
           {
             dataAbout.map((item) => (
               <div className="img" key={item.id}>
-                <DynamicImage src={item.img} alt="" />
+                <Zoom duration={1000} delay={500} triggerOnce>
+                  <DynamicImage src={item.img} alt="" />
+                </Zoom>
               </div>
             ))
           }
@@ -199,8 +208,13 @@ export default function About() {
             penawaran.map((item) => (
               <div className="box__content" key={item.id}>
                 <div className="string"></div>
-                <h1>{item.title}</h1>
-                <p>{item.text}</p>
+                <Fade direction='down' duration={1000} delay={500} triggerOnce>
+                  <h1>{item.title}</h1>
+                </Fade>
+
+                <Fade direction='up' duration={1000} delay={500} triggerOnce>
+                  <p>{item.text}</p>
+                </Fade>
               </div>
             ))
           }
@@ -259,6 +273,6 @@ export default function About() {
 
       </div>
 
-    </section>
+    </section >
   )
 }

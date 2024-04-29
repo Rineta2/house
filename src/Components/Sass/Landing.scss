@@ -43,6 +43,7 @@
 
           @media only screen and (max-width: 768px) {
             margin-top: 2rem;
+            z-index: 1;
           }
 
           h3 {
@@ -65,10 +66,12 @@
           display: flex;
           align-items: center;
           flex-direction: column;
+          gap: .5rem;
           margin-top: 5rem;
 
           @media only screen and (max-width: 768px) {
             margin-top: 2rem;
+            z-index: 1;
           }
 
           h1 {
@@ -492,6 +495,7 @@ aside {
 
         @media only screen and (max-width: 992px) {
           width: 100%;
+          height: auto;
         }
 
         img {
@@ -512,6 +516,10 @@ aside {
           flex-direction: column;
           padding: 1.5rem 5%;
           text-align: center;
+
+          @media only screen and (max-width: 992px) {
+            padding: 1rem 5%;
+          }
 
           h2 {
             font-size: $normal-fs;

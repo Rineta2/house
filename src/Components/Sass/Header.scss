@@ -87,6 +87,10 @@ header {
           font-size: $tiny-fs;
           letter-spacing: 1px;
           font-weight: 400;
+
+          @media only screen and (max-width: 468px) {
+            font-size: $normal-fs;
+          }
         }
       }
     }
@@ -96,6 +100,7 @@ header {
       align-items: center;
 
       .theme {
+
         select {
           font-size: $normal-fs;
           width: 100px;
@@ -137,7 +142,7 @@ header {
 
         @media only screen and (max-width: 768px) {
           display: block;
-          z-index: 99;
+          z-index: 999;
         }
 
         .icons {
@@ -148,9 +153,9 @@ header {
 
         .close {
           position: absolute;
-          top: 15px;
-          right: 15px;
-          font-size: 1.5rem;
+          top: -15px;
+          right: 10px;
+          font-size: $h1-fs;
           color: $body-c;
         }
       }

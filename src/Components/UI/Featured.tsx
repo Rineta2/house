@@ -5,6 +5,9 @@ import { useTheme } from '@/Components/UI/Theme/Thema';
 import { headingPenawaran, dataPenawaran } from '@/Components/UI/Data/Data'
 
 import Image from 'next/image';
+
+import { Fade, Zoom } from 'react-awesome-reveal'
+
 export default function Featured() {
 
   const { isDarkMode } = useTheme();
@@ -17,7 +20,9 @@ export default function Featured() {
         {
           headingPenawaran.map((item) => (
             <div className="heading">
-              <h2>{item.title}</h2>
+              <Fade direction='left' duration={1000} delay={500} triggerOnce>
+                <h2>{item.title}</h2>
+              </Fade>
             </div>
           ))
         }
@@ -26,11 +31,18 @@ export default function Featured() {
           {
             dataPenawaran.map((item) => (
               <div className="box" key={item.id}>
-                <Image src={item.img} alt="" />
+                <Zoom duration={1000} delay={100} triggerOnce>
+                  <Image src={item.img} alt="" />
+                </Zoom>
 
                 <div className="text">
-                  <h2>{item.title}</h2>
-                  <p>{item.desc}</p>
+                  <Fade direction='down' duration={1000} delay={100} triggerOnce>
+                    <h2>{item.title}</h2>
+                  </Fade>
+
+                  <Fade direction='up' duration={1000} delay={100} triggerOnce>
+                    <p>{item.desc}</p>
+                  </Fade>
                 </div>
               </div>
             ))
@@ -39,6 +51,6 @@ export default function Featured() {
 
       </div>
 
-    </section>
+    </section >
   )
 }

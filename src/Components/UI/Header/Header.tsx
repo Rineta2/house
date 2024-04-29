@@ -16,6 +16,8 @@ import { useTheme } from "@/Components/UI/Theme/Thema";
 
 import { usePathname } from "next/navigation";
 
+import { Fade, Zoom } from 'react-awesome-reveal'
+
 export default function Header() {
 
   const pathname = usePathname()
@@ -85,33 +87,41 @@ export default function Header() {
   return (
     <header className={`header ${fixed ? "fixed" : ""} ${isDarkMode ? "dark" : "light"}`}>
       <nav className={`nav container ${isDarkMode ? "dark" : "light"}`}>
-        <Link className="logo" href={'/'}>
-          <i><MdOutlineHouse /></i>Refined Elegance
-        </Link>
+        <Fade direction='left' duration={1000} delay={500} triggerOnce>
+          <Link className="logo" href={'/'}>
+            <i><MdOutlineHouse /></i>Refined Elegance
+          </Link>
+        </Fade>
 
         <ul className={`nav__list ${isOpen ? "open" : ""}`}>
           {navLink.map((item) => (
-            <li key={item.id} className="nav__item">
-              <Link href={item.path} className={`nav__link ${pathname === item.path ? "active" : ""}`} onClick={() => setIsOpen(false)}>{item.name}</Link>
-            </li>
+            <Zoom duration={1000} delay={500} triggerOnce>
+              <li key={item.id} className="nav__item">
+                <Link href={item.path} className={`nav__link ${pathname === item.path ? "active" : ""}`} onClick={() => setIsOpen(false)}>{item.name}</Link>
+              </li>
+            </Zoom>
           ))}
         </ul>
 
         <div className="nav__actions">
-          <div className="toggle">
-            {isOpen ? (
-              <TiTimesOutline className="close" onClick={() => setIsOpen(!isOpen)} />
-            ) : (
-              <MdOutlineMenuBook className="icons" onClick={() => setIsOpen(!isOpen)} />
-            )}
-          </div>
+          <Fade direction='down' duration={1000} delay={500} triggerOnce>
+            <div className="toggle">
+              {isOpen ? (
+                <TiTimesOutline className="close" onClick={() => setIsOpen(!isOpen)} />
+              ) : (
+                <MdOutlineMenuBook className="icons" onClick={() => setIsOpen(!isOpen)} />
+              )}
+            </div>
+          </Fade>
 
-          <div className="theme">
-            <select onChange={handleThemeChange} value={selectedTheme}>
-              <option value="dark">Dark</option>
-              <option value="light">Light</option>
-            </select>
-          </div>
+          <Fade direction='down' duration={1000} delay={500} triggerOnce>
+            <div className="theme">
+              <select onChange={handleThemeChange} value={selectedTheme}>
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+              </select>
+            </div>
+          </Fade>
         </div>
       </nav>
     </header >

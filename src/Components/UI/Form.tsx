@@ -9,6 +9,8 @@ import Axios from 'axios';
 
 import { useTheme } from '@/Components/UI/Theme/Thema';
 
+import { Zoom, Fade } from 'react-awesome-reveal'
+
 interface FormDataInput {
   nama: string;
   email: string;
@@ -79,16 +81,29 @@ export default function Form() {
       <div className={`aside__container container grid ${isDarkMode ? "dark" : "light"}`}>
         <form ref={formRef} onSubmit={handleSubmit}>
           <div className="form__type">
-            <input type="text" name="nama" placeholder="Nama" required />
-            <input type="email" name="email" placeholder="Email" required />
-            <input type="tel" name="nomber" placeholder="Nomber Handphone" required />
-            <input type="datetime-local" name="date" placeholder='Date' required />
+            <Zoom duration={1000} triggerOnce delay={300}>
+              <input type="text" name="nama" placeholder="Nama" required />
+            </Zoom>
+
+            <Zoom duration={1000} triggerOnce delay={300}>
+              <input type="email" name="email" placeholder="Email" required />
+            </Zoom>
+
+            <Zoom duration={1000} triggerOnce delay={300}>
+              <input type="tel" name="nomber" placeholder="Nomber Handphone" required />
+            </Zoom>
+
+            <Zoom duration={1000} triggerOnce delay={300}>
+              <input type="datetime-local" name="date" placeholder='Date' required />
+            </Zoom>
           </div>
 
-          <div className="btn">
-            <button type="submit">Kirim</button>
-            <ToastContainer />
-          </div>
+          <Fade duration={1000} triggerOnce delay={300} direction="up">
+            <div className="btn">
+              <button type="submit">Kirim</button>
+              <ToastContainer />
+            </div>
+          </Fade>
         </form>
 
         {errorMessage && <div className="error-message">{errorMessage}</div>}

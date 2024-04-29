@@ -2,6 +2,8 @@
 
 import React, { ReactNode } from 'react';
 
+import { useState, useEffect } from 'react';
+
 import dynamic from 'next/dynamic';
 
 import '@/Components/Sass/globals.scss';
@@ -14,22 +16,36 @@ const Header = dynamic(() => import('@/Components/UI/Header/Header'), { ssr: fal
 
 const Footer = dynamic(() => import('@/Components/UI/Footer/Footer'), { ssr: false });
 
+import { RingLoader } from 'react-spinners'
+
 type RootLayoutProps = {
   children: ReactNode;
 };
 
 const RootLayout: React.FC<RootLayoutProps> = ({ children }) => {
 
+  const [loading, setLoading] = useState(false)
+
+  useEffect(() => {
+    setLoading(true)
+    setTimeout(() => {
+      setLoading(false)
+    }, 3000)
+  }, [])
+
   return (
     <html lang="en">
       <body>
         <ThemeProvider>
-          <main>
-            <Head />
-            <Header />
-            {children}
-            <Footer />
-          </main>
+          {loading ? <RingLoader
+            color={'#FFCB71'} loading={loading} size={200} cssOverride={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)' }} /> :
+            <main>
+              <Head />
+              <Header />
+              {children}
+              <Footer />
+            </main>
+          }
         </ThemeProvider>
       </body>
     </html>

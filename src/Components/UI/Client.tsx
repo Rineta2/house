@@ -6,6 +6,8 @@ import { useTheme } from '@/Components/UI/Theme/Thema'
 
 import '@/Components/Sass/Landing.scss'
 
+import { Fade, Zoom } from 'react-awesome-reveal'
+
 export default function Client() {
 
   const { isDarkMode } = useTheme();
@@ -17,7 +19,9 @@ export default function Client() {
         {
           headingClient.map((item) => (
             <div className="heading">
-              <h1>{item.title}</h1>
+              <Fade direction='left' duration={1000} delay={500} triggerOnce>
+                <h1>{item.title}</h1>
+              </Fade>
             </div>
           ))
         }
@@ -26,9 +30,18 @@ export default function Client() {
           {
             dataClient.map((item) => (
               <div className="box" key={item.id}>
-                <i>{item.icons}</i>
-                <h3>{item.desc}</h3>
-                <span>{item.name}</span>
+                <Fade direction='down' duration={1000} delay={500} triggerOnce>
+                  <i>{item.icons}</i>
+                </Fade>
+
+                <Zoom duration={1000} delay={500} triggerOnce>
+                  <h3>{item.desc}</h3>
+                </Zoom>
+
+                <Fade direction='up' duration={1000} delay={500} triggerOnce>
+                  <span>{item.name}</span>
+                </Fade>
+
                 <div className="row"></div>
               </div>
             ))

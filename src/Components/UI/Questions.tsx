@@ -4,6 +4,8 @@ import { headingQuestion, dataQuestion } from "@/Components/UI/Data/Data"
 
 import { useTheme } from "@/Components/UI/Theme/Thema"
 
+import { Fade } from 'react-awesome-reveal'
+
 export default function Questions() {
 
   const { isDarkMode } = useTheme();
@@ -16,7 +18,9 @@ export default function Questions() {
         {
           headingQuestion.map((item) => (
             <div className="heading">
-              <h1>{item.title}</h1>
+              <Fade direction='left' duration={1000} delay={500} triggerOnce>
+                <h1>{item.title}</h1>
+              </Fade>
             </div>
           ))
         }
@@ -25,8 +29,13 @@ export default function Questions() {
           {
             dataQuestion.map((item) => (
               <div className="box" key={item.id}>
-                <h2>{item.title}</h2>
-                <p>{item.text}</p>
+                <Fade direction='down' duration={1000} delay={100} triggerOnce>
+                  <h2>{item.title}</h2>
+                </Fade>
+
+                <Fade direction='up' duration={1000} delay={100} triggerOnce>
+                  <p>{item.text}</p>
+                </Fade>
               </div>
             ))
           }

@@ -6,6 +6,9 @@ import Image from 'next/image'
 import "@/Components/Sass/Landing.scss"
 
 import { useTheme } from '@/Components/UI/Theme/Thema';
+
+import { Fade, Zoom } from 'react-awesome-reveal'
+
 export default function Management() {
 
   const { isDarkMode } = useTheme();
@@ -19,7 +22,9 @@ export default function Management() {
           {
             headingManagement.map((item) => (
               <div className="management__title">
-                <h2>{item.title}</h2>
+                <Fade direction='down' duration={1000} delay={100} triggerOnce>
+                  <h2>{item.title}</h2>
+                </Fade>
               </div>
             ))
           }
@@ -29,7 +34,9 @@ export default function Management() {
           {
             imgManagement.map((item) => (
               <div className="img">
-                <Image src={item.img} alt="" />
+                <Zoom duration={1000} delay={100} triggerOnce>
+                  <Image src={item.img} alt="" />
+                </Zoom>
               </div>
             ))
           }
